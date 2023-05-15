@@ -8,7 +8,14 @@ server:
     whitelabel:
       enabled: false
 
+
+
 spring:
+  application:
+    name: user
+  profiles:
+    active: prod
+
   datasource:
     url: jdbc:mysql://localhost:3306/inventory#change this to your database url
     password: caroline_654321 #change this to your database username
@@ -19,7 +26,7 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.MySQLDialect
         spring:
           autoconfigure:
             exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
